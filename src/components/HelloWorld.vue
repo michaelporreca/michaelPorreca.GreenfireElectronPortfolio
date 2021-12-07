@@ -1,9 +1,15 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+
     <h3>QR Codes</h3>
     <div id="qr-codes">
       <img src="../assets/full-name-qr.png" alt="Michael Porreca QR" class="qr" /> <img src="../assets/tezos-qr.png" alt="Tezos QR" class="qr" /> <img src="../assets/solana-qr.png" alt="Solana QR" class="qr" /> <img src="../assets/algorand-qr.png" alt="Algorand QR" class="qr" />
+    </div>
+    
+    <h3>Twitter Feeds</h3>
+    <div id="twitter-feeds">
+      <a class="twitter-timeline" data-tweet-limit="2" data-width="400" href="https://twitter.com/BBCAfrica?ref_src=twsrc%5Etfw">Tweets by BBCAfrica</a> <script type="application/javascript" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <a class="twitter-timeline" data-tweet-limit="2" data-width="400" href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">Tweets by ethereum</a> <script type="application/javascript" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>
 </template>
