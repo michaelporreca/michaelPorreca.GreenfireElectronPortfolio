@@ -1,4 +1,4 @@
-# greenfire-assessment
+# Greenfire Assessment
 
 ## Operating System
 - Edition: Windows 11 Home Insider Preview
