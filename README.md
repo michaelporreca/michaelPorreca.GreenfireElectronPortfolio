@@ -8,7 +8,7 @@ This is the technical assessment for the company Greenfire using ElectronJS, Vue
 - OS: Windows 11 Home Insider Preview
 - Vue: 2.6.11
 - Node: 8.1.3
-- Electron: 
+- Electron: 13.0.0
 
 ## Running Project
 ```
