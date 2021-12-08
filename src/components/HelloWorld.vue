@@ -2,17 +2,35 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
 
-    <h3>QR Codes</h3>
+    <h2>QR Codes</h2>
     <div id="qr-codes">
-      <img src="../assets/full-name-qr.png" alt="Michael Porreca QR" class="qr" /> <img src="../assets/tezos-qr.png" alt="Tezos QR" class="qr" /> <img src="../assets/solana-qr.png" alt="Solana QR" class="qr" /> <img src="../assets/algorand-qr.png" alt="Algorand QR" class="qr" />
+      <div class="qr-codes-single">
+        <h3>Michael Porreca</h3>
+        <img src="../assets/full-name-qr.png" alt="Michael Porreca QR" class="qr" />
+      </div>
+      
+      <div class="qr-codes-single">
+        <h3>Tezos (XTZ)</h3>
+        <img src="../assets/tezos-qr.png" alt="Tezos QR" class="qr" />
+      </div>
+      
+      <div class="qr-codes-single">
+        <h3>Solana (SOL)</h3>
+        <img src="../assets/solana-qr.png" alt="Solana QR" class="qr" />
+      </div>
+      
+      <div class="qr-codes-single">
+        <h3>Algorand (ALGO)</h3>
+        <img src="../assets/algorand-qr.png" alt="Algorand QR" class="qr" />
+      </div>
     </div>
     
-    <h3>Twitter Feeds</h3>
+    <h2>Twitter Feeds</h2>
     <div id="twitter-feeds">
       <a class="twitter-timeline" data-tweet-limit="2" data-width="400" href="https://twitter.com/BBCAfrica?ref_src=twsrc%5Etfw">Tweets by BBCAfrica</a> <script type="application/javascript" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <a class="twitter-timeline" data-tweet-limit="2" data-width="400" href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">Tweets by ethereum</a> <script type="application/javascript" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 
-  <h3>Social Links</h3>
+    <h2>Social Links</h2>
     <div id="twitter-feeds">
       <a href="https://github.com/michaelporreca" target="_blank" alt="">GitHub</a>
       <a href="https://www.linkedin.com/in/michael-porreca/" target="_blank" alt="">LinkedIn</a>
@@ -34,7 +52,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
+h2 {
   margin: 40px 0 40px;
 }
 ul {
@@ -47,10 +65,17 @@ li {
 }
 a {
   color: #42b983;
+  padding: 20px;
 }
 #qr-codes, #twitter-feeds {
   display: flex;
   justify-content: space-evenly;
+}
+.qr-codes-single {
+  padding: 50px;
+  background-color: #F3F3F3;
+  border-radius: 20px;
+  border: 1px solid #ccc;
 }
 .qr {
   width: 100px;
