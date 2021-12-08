@@ -12,7 +12,7 @@
       <a class="twitter-timeline" data-tweet-limit="2" data-width="400" href="https://twitter.com/BBCAfrica?ref_src=twsrc%5Etfw">Tweets by BBCAfrica</a> <script type="application/javascript" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <a class="twitter-timeline" data-tweet-limit="2" data-width="400" href="https://twitter.com/ethereum?ref_src=twsrc%5Etfw">Tweets by ethereum</a> <script type="application/javascript" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 
-    <h3>Social Links</h3>
+  <h3>Social Links</h3>
     <div id="twitter-feeds">
       <a href="https://github.com/michaelporreca" target="_blank" alt="">GitHub</a>
       <a href="https://www.linkedin.com/in/michael-porreca/" target="_blank" alt="">LinkedIn</a>
