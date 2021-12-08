@@ -1,6 +1,6 @@
 # Greenfire Assessment
 
-![Greenfire](https://i.imgur.com/jkKowOU.jpg)
+![Greenfire](https://i.imgur.com/LsFjlpt.jpg)
 
 This is the technical assessment for the company Greenfire using ElectronJS, VueJS and NodeJS. You can find out more about Greenfire on their website [here](http://greenfire.io/).
 
