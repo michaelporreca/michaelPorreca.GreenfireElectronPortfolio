@@ -12,5 +12,6 @@ This is the technical assessment for the company Greenfire using ElectronJS, Vue
 
 ## Running Project
 ```
+npm install
 npm run serve
 ```
