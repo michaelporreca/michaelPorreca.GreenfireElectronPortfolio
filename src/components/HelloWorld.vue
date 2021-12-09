@@ -1,5 +1,7 @@
 <template>
   <div class="hello">
+    <img src="../assets/greenfire.jpg" width="600px" alt="Greenfire" />
+
     <h1>{{ msg }}</h1>
 
     <h2>QR Codes</h2>
@@ -11,16 +13,19 @@
       
       <div class="qr-codes-single">
         <h3>Tezos (XTZ)</h3>
+        <p>${{ cryptos.XTZ.USD }}</p>
         <img src="../assets/tezos-qr.png" alt="Tezos QR" class="qr" />
       </div>
       
       <div class="qr-codes-single">
         <h3>Solana (SOL)</h3>
+        <p>${{ cryptos.SOL.USD }}</p>
         <img src="../assets/solana-qr.png" alt="Solana QR" class="qr" />
       </div>
       
       <div class="qr-codes-single">
         <h3>Algorand (ALGO)</h3>
+        <p>${{ cryptos.ALGO.USD }}</p>
         <img src="../assets/algorand-qr.png" alt="Algorand QR" class="qr" />
       </div>
     </div>
@@ -42,10 +47,27 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
+  },
+  data: () => ({
+    cryptos: [],
+    errors: []
+  }),
+
+  created () {
+    axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=XTZ,SOL,ALGO&tsyms=USD')
+      .then(response => {
+        this.cryptos = response.data
+        console.log(response)
+      })
+      .catch(e => {
+        this.errors.push(e)
+      })
   }
 }
 </script>
@@ -54,6 +76,8 @@ export default {
 <style scoped>
 h2 {
   margin: 40px 0 40px;
+  padding: 25px;
+  border-bottom: 1px solid green;
 }
 ul {
   list-style-type: none;
