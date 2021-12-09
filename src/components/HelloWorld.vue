@@ -4,6 +4,10 @@
 
     <h1>{{ msg }}</h1>
 
+    <router-view/>
+    <button @click="download">Download Screenshot</button>
+    <div id="pdf"></div>
+
     <h2>QR Codes</h2>
     <div id="qr-codes">
       <div class="qr-codes-single">
@@ -48,6 +52,8 @@
 
 <script>
 import axios from 'axios'
+import html2canvas from 'html2canvas'
+import * as JsPDF from 'jspdf'
 
 export default {
   name: 'HelloWorld',
@@ -68,6 +74,18 @@ export default {
       .catch(e => {
         this.errors.push(e)
       })
+  },
+  methods: {
+    download () {
+      html2canvas(document.querySelector('.hello'), {imageTimeout: 5000, useCORS: true}).then(canvas => {
+        document.getElementById('pdf').appendChild(canvas)
+        let img = canvas.toDataURL('image/png')
+        let pdf = new JsPDF('portrait', 'mm', 'a4')
+        pdf.addImage(img, 'JPEG', 5, 5, 200, 287)
+        pdf.save('relatorio-remoto.pdf')
+        document.getElementById('pdf').innerHTML = ''
+      })
+    }
   }
 }
 </script>
@@ -88,8 +106,12 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
-  padding: 20px;
+  color: #000;
+  background-color: #B2D2A4;
+  border: 1px solid #1A4314;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
 }
 #qr-codes, #twitter-feeds {
   display: flex;
@@ -104,5 +126,11 @@ a {
 .qr {
   width: 100px;
   height: 100px;
+}
+button {
+  background-color: #B2D2A4;
+  border: 1px solid #1A4314;
+  padding: 10px;
+  border-radius: 10px;
 }
 </style>
